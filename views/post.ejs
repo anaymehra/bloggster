@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<section>
+<div class="container center-form">
+    <h1 class="page-title">Write Blog</h1>
+    <br>
+    <form action="/post" method="post">
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control input-padding" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputTopic" class="form-label">Topic Name</label>
+            <input type="text" class="form-control input-padding" id="topic" name="topic" placeholder="Enter topic name" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputDate" class="form-label">Date</label>
+            <input type="date" class="form-control input-padding" id="date" name="date" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputText" class="form-label">Text</label>
+            <textarea class="form-control input-padding" id="blogText" rows="3" placeholder="Enter your text" name="blogText" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+</section>
+
+<%- include("partials/footer.ejs") %>

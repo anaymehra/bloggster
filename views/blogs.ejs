@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %> 
+<% if(locals.blogs){ %>
+<div class="container">
+    <% if (blogs.length > 0) { %>
+        <% blogs.forEach(blog => {%>
+            <article class="blog-post">
+                <h2 class="blog-post-title"><a href="/blogs/<%= blog.id %>"><%= blog.topic %></a></h2>  
+                <!-- here blog is written wheheras blogs was passed, that is because of the loop -->
+                <!-- In blogs.ejs, we've modified the rendering of blog post links to include links to the individual blog routes (/blogs/:id). Each link points to the route corresponding to the id of the blog post it represents.
+                Now, each blog post will have its own route that can be accessed by clicking on the blog post title link. -->
+                <p class="blog-post-meta"><%= blog.date%> by <a href="#"><%= blog.name%></a></p>
+                <p><%= blog.blogText %></p>
+                <!-- POST method gets overriden by DELETE method (by using methodOverride middleware) -->
+                <form action="/blogs/<%= blog.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                <form action="/blogs/<%= blog.id %>/edit" method="GET">
+                    <button type="submit" class="btn btn-dark">Update</button>
+                </form>
+                
+            </article>
+            <hr>
+        <% }); %>
+    <% } else {%>
+        <h1 class="page-title"> So Empty...</h1>
+    <% } %>
+</div>
+<% } %>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,54 @@
+.blog-post > h2 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+  
+.brand-title {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-size: 28px;
+    font-style: normal;
+}
+.nav-link {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 10px;
+}
+.nav-pills .nav-link.active {
+    background-color: black !important;
+}
+.nav-pills .nav-link {
+    color: black;
+}
+.page-title {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 48px;
+}
+.form-label {
+    font-family: "Rubik Mono One", monospace;
+}
+.blog-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: "Rubik Mono One", monospace;
+}
+
+.blog-post {
+    /* Add padding around each blog post */
+    padding: 20px;
+    /* Add margin below each blog post */
+    margin-bottom: 20px;
+}
+
+.blog-post form {
+    /* Add margin between each form (delete and update) */
+    margin-top: 10px;
+}
+
+.blog-post form button {
+    /* Add some padding inside each button */
+    padding: 8px 16px;
+    /* Add margin between buttons */
+    margin-right: 10px;
+}

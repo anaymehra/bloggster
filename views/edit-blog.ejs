@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <h2>Edit Blog Post</h2>
+    <form action="/blogs/<%= blog.id %>?_method=PUT/edit" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= blog.name %>">
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control" id="date" name="date" value="<%= blog.date %>">
+        </div>
+        <div class="form-group">
+            <label for="topic">Topic:</label>
+            <input type="text" class="form-control" id="topic" name="topic" value="<%= blog.topic %>">
+        </div>
+        <div class="form-group">
+            <label for="blogText">Blog Text:</label>
+            <textarea class="form-control" id="blogText" name="blogText"><%= blog.blogText %></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+<%- include("partials/footer.ejs") %>
